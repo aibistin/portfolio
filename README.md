@@ -3,7 +3,9 @@
 ### Sample portfolio website
 
 **Built with Meteor.js**
-
+<style>
+ul {list-style: none}
+</style>
 ###### Includes
 <ul>
   <li>A blog engine using ryw:blog package</li>
