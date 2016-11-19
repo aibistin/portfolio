@@ -5,9 +5,6 @@
 **Built with Meteor.js**
 
 ###### Includes
-<style>
-  ul {list-style: none}
-</style>
 <ul>
   <li>A blog engine using ryw:blog package</li>
   <li>A photo carousel</li>
