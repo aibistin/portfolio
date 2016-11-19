@@ -1,9 +1,31 @@
-# portfolio
+# Portfolio
 
-This is a sample portfolio website. 
-It includes.
-1. A blog using ryw:blog package
-2. A photo carousel
-3. A form to easily enter or remove event
+### Sample portfolio website
 
-It uses Bootstrap 3 styling. 
+**Built with Meteor.js**
+
+###### Includes
+<style>
+ul {list-style: none}
+</style>
+<ul style="list-style=none">
+  <li>A blog engine using ryw:blog package</li>
+  <li>A photo carousel</li>
+  <li>A form to easily add or remove events</li>
+  <li>An Admin account</li>
+  <li>Ability to create user accounts</li>
+  <li>User authentication</li>
+  <li>Bootstrap 3 styling</dt>
+</ul>
+  
+  
+###### Install and run the 'portfolio' app with Meteor
+
+
+```
+curl https://install.meteor.com/ | sh
+
+cd portfolio
+
+meteor run
+```
