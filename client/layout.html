@@ -1,0 +1,10 @@
+<template name="layout">
+    <!-- Header is always here -->
+    {{> header}}
+    <!-- Yield is a region where different data is injected -->
+    <div class="container">
+      {{> yield}}
+    </div>
+    {{> footer}}
+</template>
+

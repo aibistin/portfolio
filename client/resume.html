@@ -1,0 +1,100 @@
+<template name="resume">
+
+<div class="row">
+
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+  <div class="list-group bs-sidebar affix" id="sidebar">
+    <ul class="nav nav-pills nav-stacked">
+    <li><a href="#name-address" class="list-group-item">
+      Name and Address
+  </a></li>
+    <li><a href="#overview" class="list-group-item">Overview
+    </a></li>
+    <li><a href="#experience" class="list-group-item">Professional Experience
+    </a></li>
+    <li><a href="#certs" class="list-group-item">Certifications
+    </a></li>
+    <li><a href="#education" class="list-group-item">Education
+    </a></li>
+    </ul>
+  </div>
+</div>  
+
+  <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+    <div class="panel panel-primary">
+        <!-- >  <div class="panel-heading">My Resume</div> -->
+      <div class="panel-body">
+    
+      <address id="name-address" class="text-center res-section">
+       <strong>Greatus Developerous</strong><br>
+           123 Deep Cave South, Behind A Rock<br>
+           Lower Mountain View, Banana Rep. <br>
+           <abbr title="Phone"></abbr> (123) 456-7890
+           <abbr title="Email"></abbr><a href="mailto:#">test@test.com</a>
+      </address>
+      <h4 class="text-center res-section" id="overview">Overview</h4>
+      <p>
+      This is a brief summary of the many wonderful things that I did. Or
+      maybe what I wish to do.
+      </p>
+    
+      <h4 class="text-center res-section" id="experience">Professional Experience</h4>
+      <!-- Job -->
+      <strong>Almost Greatest Inc.</strong> - New York, NY
+      Engineer, Dec 2013 – Present
+      <p>Creating really great stuff. Testing great stuff. Making the company
+      loads of dosh. Work, work, work and little compensation.</p>
+    
+      <p>Building the next great thing that's going to make everyones live so
+      wonderful and put loads of people out of work.</p>
+    
+      <p>Making the boss look great again.</p>
+    
+      <p>Fixing all the company's problems.</p>
+    
+      <p><em>Frequently Used Modules:</em> Fix::Everything::Protocol,
+      Work::Nonstop::Tiny, Build::Great::Stuff.</p>
+    
+      <!-- Job -->
+      <strong>Fun Times Inc</strong> - New York, NY
+      Developer, Aug 2010 - Dec 2013
+      <p>Having lots of fun, and getting paid for it.</p>
+    
+      <p>Goofing off.</p>
+    
+      <p>Extra long paid vacations.</p>
+    
+      <p>And then there's the weekends...</p>
+      <!-- Job -->
+      <strong>The Bank Of Corporate Shenanigans PLC</strong> - New York, NY
+      Junior Developer, Aug 2007 - Dec 2010
+      <p>Inter account money shifting</p>
+    
+      <p>Extracting money from clients.</p>
+    
+      <p>Creative accounting.</p>
+    
+      <p>CEO's wallet expansion.</p>
+    
+      <h4 class="text-center res-section" id="certs">Certifications</h4>
+      <strong>Certified Bug Extractor</strong>, Dec 2007 
+    
+      <h4 class="text-center res-section" id="education">Education</h4>
+      <strong>BS Computer Science</strong>, University Of Lots Of Coding, Codeville - June 2007 
+      
+      </div> <!-- /Panel Body -->
+  </div> <!-- /Panel -->
+</div> <!-- /md-10 -->
+
+</div> <!-- /row -->
+
+<script>
+/*global $*/
+$('#sidebar').affix({
+  offset: {
+    top: $('#top-nav').outerHeight(true)
+  }
+}); 
+</script>
+</template>
+

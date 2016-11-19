@@ -1,0 +1,61 @@
+<template name="events">
+  <h2>Upcoming Events</h2>
+   {{#if isAdmin}}
+     {{> addEvent}} 
+   {{/if}}
+   {{> listEvents}}
+</template>
+
+
+<template name="addEvent">
+  <div class="row">
+    <div class="col-md-6 cols-xs-12">
+        <!-- Add event form -->
+      <form class="form-horizontal" name="addEvent">
+        <fieldset>
+            <legend>Add events</legend>
+        <div class="form-group">
+          <label for="eventName">Name: </label>
+          <input type="text" class="form-control" name="eventName"  placeholder="This will be the event heading" value="" autofocus="{{setAutoFocus}}"/>
+        </div>
+
+        <!-- <label for="eventDate">On: </label>  -->
+        <div class="form-group js-event-add hidden">
+          <div class="input-group datetimepicker">
+            <input class="set-due-date form-control" type="text" name="eventDate"
+            placeholder="mm/dd/yyyy HH:MM AM" />
+            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+          </div>
+        </div>
+
+
+        <div class="form-group js-event-add hidden">
+          <label for="eventDesc">Desc: </label>
+          <textarea class="form-control" name="eventDesc" 
+              placeholder="What's planned for this event" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Event</button>
+        </fieldset>
+      </form>
+    </div> <!-- /col -->
+  </div> <!-- /row -->
+</template>
+
+<template name="listEvents"> 
+  <hr/>
+  <p class="lead">Schedule</p>
+  <div class="row">
+  {{#each event in allEvents}} 
+    <div class="event-display">
+    <div class="list-group"> 
+      <h4 class="list-group-item-heading">{{event.name}} - <small>{{dispDate event.date}}</small></h4>
+      <p class="list-group-item-text">{{event.desc}}
+      {{#if isAdminList}}
+      <button type="button" id="{{event._id}}" class="btn btn-danger btn-xs js-delete-event">Remove</button>
+      {{/if}}
+      </p>
+    </div>
+    </div>
+    {{/each}}
+  </div>
+</template>

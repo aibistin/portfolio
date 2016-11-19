@@ -1,0 +1,79 @@
+<template name="home">
+    <h2>My Portfolio</h2>
+    {{> tempAccts }}
+    {{> carouselImgs}}
+    {{> blogLatest num=5}}
+</template>
+
+<template name="allImages">
+  <div class="row">
+    {{#each img in allImages}}
+    <div class="col-xs-6 col-md-3">
+      <a href="#" class="thumbnail">
+          <img class="img-responsive port-image" src="{{img.imageUrl}}" alt="{{img.name}}">
+      </a>
+    </div>
+    {{/each}}
+  </div>
+</template>
+
+<template name="tempAccts">
+  <div class="row">
+  <!-- Account setup modal -->
+  <button type="button" class="btn btn-info btn-xs pull-right" data-toggle="modal" data-target=".bs-acct-modal-md">Please Read This</button>
+  </div> <!-- /row -->
+
+  <div class="modal fade bs-acct-modal-md" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-md" role="document">
+      <div class="modal-content">
+       <p>For demo purposes only,I have created two test accounts.</p>
+       <dl class="dl-horizontal">
+         <dt>Admin User Name</dt>
+         <dd>admin@test.com</dd>
+         <dt>Password</dt>
+         <dd>test123</dd>
+         <dt>Blog Author User Name</dt>
+         <dd>test@test.com</dd>
+         <dt>Password</dt>
+         <dd>test123</dd>
+       </dl>
+      </div>
+    </div>
+  </div>
+</template>
+
+
+<template name="carouselImgs">
+  {{ resetCarousel }}
+  <div class="row top-spacer-small">
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+    <div id="home-photo-carousel" class="carousel slide wrap" data-ride="carousel">
+  <!-- Indicators -->
+  <!--
+  <ol class="carousel-indicators">
+    <li data-target="#home-photo-carousel" data-slide="0" class="active"></li>
+    <li data-target="#home-photo-carousel" data-slide="next"></li> <li data-target="#home-photo-carousel" data-slide="prev"></li> </ol> -->  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    {{#each img in allImages}}
+      <div class="item {{#if isFirstIteration }}active{{/if}}">
+      <img src="{{img.imageUrl}}" alt="{{formatDate img.name}}">
+      <div class="carousel-caption">{{formatDate img.name}}</div>
+    </div>
+    {{/each}}
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#home-photo-carousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#home-photo-carousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+  </div>
+  </div>
+</div> <!-- /row -->
+<hr />
+<div class="bottom-spacer-small"></div>
+</template>

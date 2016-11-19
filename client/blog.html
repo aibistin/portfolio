@@ -1,0 +1,31 @@
+<!--  Set Up in lib/blog.js Configuration  -->
+<!--  Use this instead of the default blog template -->
+<template name="myBlogIndexTemplate">
+  <h2>Recent Blogs</h2>
+  <ul>
+    {{#if blogReady}}
+      {{#each posts}}
+        <li>
+        <h3><a href="/blog/{{slug}}">{{title}}</a></h3>
+          <p class="text-muted">Published on <em>{{publishedAt}}</em></p>
+          <p><span class="lead">{{excerpt}}</span></p>
+        </li>
+      {{else}}
+        <li class="text-warning">No posts found.</li>
+      {{/each}}
+    {{else}}
+      <li class="text-info">Loading...</li>
+    {{/if}}
+  </ul>
+  
+  {{#if blogReady}}
+    <p class="lead">{{blogPager}}</p>
+  {{/if}}
+</template>
+<!--
+<template name="blog">
+  <div class="container">
+    {{> blogIndex}}
+  </div>
+</template>
+-->

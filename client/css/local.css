@@ -1,0 +1,97 @@
+/*
+p:first-child:first-letter{
+
+  font-size: 1.3em;
+  font-family: "Edwardian Script ITC", "Brush Script MT", cursive;
+}
+*/
+/*
+p:first-child:first-letter { 
+  float: left;
+  color: #903;
+  font-size: 65px;
+  line-height: 50px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px;
+  font-family: Georgia;
+ }
+ */
+
+.tad-larger-text{
+  font-size: 1.2em;
+}
+
+.bottom-spacer{
+    margin-bottom: 30px;
+}
+.top-spacer{
+    margin-top: 80px;
+}
+
+.top-spacer-small{
+    margin-top: 40px;
+}
+.bottom-spacer-small{
+    margin-bottom: 15px;
+}
+
+.hidden{
+  display:none;
+}
+
+
+/* Added to make internal page navigation be more precice */
+.res-section{
+  padding-top: 80px;
+  margin-top: -80px;
+}
+
+@media (min-width: 768px) {
+  .bs-sidebar.affix {
+    width: 158px;
+  }
+}
+
+@media (min-width: 992px) {
+  .bs-sidebar.affix {
+    width: 213px;
+    position: fixed;
+  }
+}
+
+@media (min-width: 1200px) {
+  .bs-sidebar.affix {
+    width: 263px;
+  }
+}
+
+
+/*Google Fonts API */
+body{
+    font-family: 'Open Sans', serif;
+ /*   font-size: 18px; */
+}
+
+.blog{
+    font-family: 'Raleway', serif;
+    font-size: 18px;
+}
+
+.port-image{
+    vertical-align: middle;
+    /*
+  .center-block();
+  */
+}
+
+.event-display{
+  border-top: .25px solid #99ccff;
+  padding: 8px 0 1px 0;
+  /* margin:  6px 0 5px 0; */
+}
+
+
+
+
+

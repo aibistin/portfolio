@@ -1,0 +1,67 @@
+
+<head>
+  <meta charset="UTF-8">
+  <title>My Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+  <script>
+    /*global hljs*/
+/*    hljs.initHighlightingOnLoad(); */
+  </script>
+  <!--
+  <link rel="stylesheet" href="bootswatch_readable_min.css"> 
+  <link rel="stylesheet" href="bootswatch_journal_min.css">
+  -->
+  <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway">
+  <!--
+  <link rel="stylesheet" href="local.css"> 
+  -->
+</head>
+
+<template name="header">
+<div class="navbr navbar-default navbar-fixed-top" id="top-nav" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+        <a href="{{pathFor route='home'}}" class="navbar-brand">Portfolio</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-left">
+        <li>
+          <a href="{{pathFor 'events'}}">Events</a>
+        </li>
+
+        <li>
+          <a href="{{pathFor 'media'}}">Media</a>
+        </li>
+
+        <li>
+          <a href="{{pathFor route='resume'}}">Resume</a>
+        </li>
+        
+        <li>
+          <a href="{{blogPathFor 'blogIndex'}}">Blog</a>
+        </li>
+
+        {{#if isLoggedIn}}
+        <li>
+          <a href="{{blogPathFor 'blogAdmin'}}">Admin</a>
+        </li>
+        {{/if}}
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        {{> loginButtons}}
+      </ul>
+      <!--  using useraccounts:bootstrap
+      <ul class="nav navbar-nav navbar-right">
+        {{> atForm}}
+      </ul>
+      -->
+    </div>
+  </div>
+</div>
+<div class="top-spacer page-top"></div>
+</template>
